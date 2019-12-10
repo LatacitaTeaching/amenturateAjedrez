@@ -59,9 +59,9 @@
 \subsection{¿Qué Sabe Hacer un Computador?}
 
 \begin{frame}[c]
-    \frametitle{¿Qué Sabe Hacer un Computador?}    
+    \frametitle{¿Qué Sabe Hacer un Computador?}
     \begin{enumerate}[<+->]
-        \item Sumas y restas. 
+        \item Sumas y restas.
         \item (Multiplicaciones y Divisiones).
         \item Comparar números por igualdad.
         \item Comparar números por desigualdad.
@@ -73,10 +73,10 @@
 \begin{frame}[c]
     \frametitle{¿Qué Sabe Hacer un Computador?}
     \begin{center}
-       \includegraphics[width=0.5\linewidth]{images/intro/alanTuring.eps} \\ 
+       \includegraphics[width=0.5\linewidth]{images/intro/alanTuring.eps} \\
         \textbf{Alan Turing}
     \end{center}
-    
+
     %% Imagen de Alan Turing
 
     %% 1952, Alan Turing procesado por delito de homosexualidad.
@@ -84,8 +84,8 @@
     %% 1954, muere tras ingerir una manzana envenada con cianuro (suicido, asesinato, despiste)
     %% 2009, Gordon Brown pide públicamente disculpas
     %% 2012, David Cameron deniega el indulto.
-    %% 2013, Indulto real 
-    
+    %% 2013, Indulto real
+
     %% https://elpais.com/sociedad/2013/11/13/actualidad/1384332286_406469.html
     %% Hidrogenesse, Un dígito binario dudoso. Recital para Alan Turing
 \end{frame}
@@ -108,13 +108,56 @@
     \begin{enumerate}[<+->]
         \item Represento el juego como un conjunto de números.
         \item Especifico cómo realizar movimientos válidos como una serie de operaciones básicas.
-        \item Especifico cómo decidir si el juego ha terminado. 
+        \item Especifico cómo decidir si el juego ha terminado.
         \item Especifico cómo decidir cuán buena es la victoria (si hay diferencias).
     \end{enumerate}
 \end{frame}
 
+%% Tablero, una especie de matriz o tabla con números: 0, en blanco, 1 círculo, 2 aspa
+%% Movimientos válidos: donde haya huecos, puedo poner una ficha del turno que corresponda, tenga sentido o no. 
+%% Final de la partida: hay tres en raya (recorro filas, columnas, y diagonales y compruebo si los números son iguales).
 
+\begin{frame}[c]
+    \frametitle{Algoritmo Minimax}
+    \begin{center}
+        \includegraphics[width=0.15\linewidth]{images/minimax/tresEnRaya.eps}
+    \end{center}
+    \begin{enumerate}[<+->]
+        \item El tablero es una tabla de números -1/libre, 0/círculo, 1/cruz (yo).
+        \item Movimientos válidos: si hay hueco (-1), pongo la ficha que toque.
+        \item Final de la partida: 
+            \begin{itemize}
+                \item Miro filas, columnas y diagonales por si hay tres fichas iguales.
+                \item No hay huecos (-1) libres.
+            \end{itemize}
+        \item Valor de la partida: 
+            \begin{itemize}
+                \item Tres círculos (0) en raya, pierdo, valor 0. 
+                \item Tres cruces (1) en raya, gano, valor 2. 
+                \item No hay huecos libres (-1) y ningún tres en raya, empate, valor 1.
+            \end{itemize}
+    \end{enumerate}
+\end{frame}
 
+\begin{frame}[c]
+    \frametitle{Algoritmo Minimax}
+    \begin{enumerate}[<+->]
+        \item Por turnos, voy calculando todos los movimientos posibles.
+        \item Por cada partida finalizada, calculo su valor. 
+        \item Tras generar todas las partidas posibles, propago los valores:
+        \begin{enumerate}
+            \item Si muevo yo, escojo el movimiento más favorable para mí (\emph{max}).
+            \item Si mueve el contrincante, escoge el movimiento menos favorable para mí (\emph{min}).
+        \end{enumerate}
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}[c]
+    \frametitle{Algoritmo Minimax}
+    \begin{center}
+        \includegraphics[width=0.90\linewidth]{images/minimax/minimax.eps}
+    \end{center}
+\end{frame}
 
 \section{Backtracking y Ramificación y Poda}
 

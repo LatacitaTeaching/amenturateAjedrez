@@ -240,31 +240,15 @@
         \item Represento el problema como un conjunto de números.
         \item Especifico cómo realizar pasos válidos hacia la solución.
         \item Especifico cómo decidir si he encontrado una solución.
-        \item Especifico cómo decidir cuán buena es la victoria (si hay diferencias).
+        \item Especifico cómo decidir cuán buena es la solución (si hay diferencias).
     \end{enumerate}
 \end{frame}
 
 \begin{frame}[c]
     \frametitle{Algoritmo \emph{Backtracking}}
-    \begin{enumerate}[<+->]
-        \item Problema: El laberinto es una tabla de números. 
-            \begin{itemize}
-                \item -1 significa obstáculo.
-                \item Un valor positivo representa el coste de atravesar la casilla.
-                \item 0 indica que ya he pasado.
-            \end{itemize}
-        \item Pasos válidos: Moverse derecha, arriba, izquierda y abajo, siempre que: 
-            \begin{itemize}
-                \item Siga dentro del laberinto.
-                \item No me mueva a un obstáculo.
-            \end{itemize}
-        \item Solución: Estoy en la casilla de salida.
-        \item Coste: Suma de las casillas por las que he pasado.
-    \end{enumerate}
-\end{frame}
-
-\begin{frame}[c]
-    \frametitle{Algoritmo \emph{Backtracking}}
+    \begin{center}
+        \includegraphics[width=0.25\linewidth]{images/backtracking/laberinto.eps}
+    \end{center}
     \begin{enumerate}[<+->]
         \item Problema: El laberinto es una tabla de números.
             \begin{itemize}
@@ -272,14 +256,71 @@
                 \item Un valor positivo representa el coste de atravesar la casilla.
                 \item 0 indica que ya he pasado.
             \end{itemize}
-        \item Pasos válidos: Moverse derecha, arriba, izquierda y abajo, siempre que:
+        \item Pasos válidos: Moverse derecha, abajo, izquierda y arriba si:
             \begin{itemize}
-                \item Siga dentro del laberinto.
-                \item No me mueva a un obstáculo.
+                \item Sigo dentro del laberinto.
+                \item No me muevo a un obstáculo.
             \end{itemize}
         \item Solución: Estoy en la casilla de salida.
         \item Coste: Suma de las casillas por las que he pasado.
     \end{enumerate}
+\end{frame}
+
+\begin{frame}[c]
+    \frametitle{Algoritmo \emph{Backtracking}}
+    \begin{enumerate}[<+->]
+        \item Si soy solución, calculo el coste y lo propago.
+        \item Si hay algún movimiento libre, lo genero y lo exploro.
+        \begin{itemize}
+            \item Si el movimiento lleva a una solución y no había solución, anoto el movimiento como solución.
+            \item Si el movimiento lleva a una solución, había solución y la mejora, anoto el movimiento como solución.
+            \item Si el movimiento lleva a una solución, había solución y no la mejora, descarto el movimiento.
+        \end{itemize}
+        \item Si no hay más movimientos libres, \emph{vuelvo a atrás} y propago el valor de la solución.
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}[t]
+    \frametitle{Algoritmo \emph{Backtracking}}
+    \only<1|handout:0>{
+        \rput[lt](0,0){
+            \includegraphics[width=\linewidth]{images/backtracking/laberinto00.eps}
+        }
+    }
+    \only<2|handout:0>{
+        \rput[lt](0,0){
+            \includegraphics[width=\linewidth]{images/backtracking/laberinto01.eps}
+        }
+    }
+    \only<3|handout:0>{
+        \rput[lt](0,0){
+            \includegraphics[width=\linewidth]{images/backtracking/laberinto02.eps}
+        }
+    }
+\end{frame}
+
+\begin{frame}[t]
+    \frametitle{Algoritmo \emph{Backtracking}}
+    \only<1|handout:0>{
+        \rput[lt](0,0){
+            \includegraphics[width=\linewidth]{images/backtracking/backtracking00.eps}
+        }
+    }
+    \only<2|handout:0>{
+        \rput[lt](0,0){
+            \includegraphics[width=\linewidth]{images/backtracking/backtracking01.eps}
+        }
+    }
+    \only<3|handout:0>{
+        \rput[lt](0,0){
+            \includegraphics[width=\linewidth]{images/backtracking/backtracking02.eps}
+        }
+    }
+    \only<4|handout:1>{
+        \rput[lt](0,0){
+            \includegraphics[width=\linewidth]{images/backtracking/backtracking03.eps}
+        }
+    }
 \end{frame}
 
 \subsection{Ramificación y Poda}
@@ -288,12 +329,13 @@
     \frametitle{Algoritmo Ramificación y Poda}
     \begin{block}{Algoritmo Ramificación y Poda}
         \begin{enumerate}[<+->]
-            \item Versión de \emph{backtracking} donde evalúo lo prometedor de cada nodo, y borro las ramas que no pueden alcanzar una solución óptima. 
-            \item Para evaluar lo prometedor, utilizo heurísticas.
+            \item Versión de \emph{backtracking} donde evalúo lo prometedor de cada nodo, y borro las ramas que no pueden alcanzar una solución óptima.
+            \item Para evaluar lo prometedor, utilizo \emph{heurísticas}.
         \end{enumerate}
     \end{block}
 \end{frame}
 
+%% Poner ejemplo.
 
 \section{Redes Neuronales: Jugando Parchís}
 
@@ -302,7 +344,7 @@
 %% - Algoritmo
 %% - Función
 %% - Exponencial
-%% - 
+%% -
 
 
 \end{document} 

@@ -105,6 +105,14 @@
 
 \begin{frame}[c]
     \frametitle{Algoritmo Minimax}
+    \begin{block}{Algoritmo Minimax}
+        Algoritmo, o procedimiento sistemático, para decidir cuál es el movimiento más óptimo en un juego con información perfecta, es decir, donde todos los datos del juego o partida son conocidos por todos los jugadores.
+    \end{block}
+\end{frame}
+
+
+\begin{frame}[c]
+    \frametitle{Algoritmo Minimax}
     \begin{enumerate}[<+->]
         \item Represento el juego como un conjunto de números.
         \item Especifico cómo realizar movimientos válidos como una serie de operaciones básicas.
@@ -114,7 +122,7 @@
 \end{frame}
 
 %% Tablero, una especie de matriz o tabla con números: 0, en blanco, 1 círculo, 2 aspa
-%% Movimientos válidos: donde haya huecos, puedo poner una ficha del turno que corresponda, tenga sentido o no. 
+%% Movimientos válidos: donde haya huecos, puedo poner una ficha del turno que corresponda, tenga sentido o no.
 %% Final de la partida: hay tres en raya (recorro filas, columnas, y diagonales y compruebo si los números son iguales).
 
 \begin{frame}[c]
@@ -125,15 +133,15 @@
     \begin{enumerate}[<+->]
         \item El tablero es una tabla de números -1/libre, 0/círculo, 1/cruz (yo).
         \item Movimientos válidos: si hay hueco (-1), pongo la ficha que toque.
-        \item Final de la partida: 
+        \item Final de la partida:
             \begin{itemize}
                 \item Miro filas, columnas y diagonales por si hay tres fichas iguales.
                 \item No hay huecos (-1) libres.
             \end{itemize}
-        \item Valor de la partida: 
+        \item Valor de la partida:
             \begin{itemize}
-                \item Tres círculos (0) en raya, pierdo, valor 0. 
-                \item Tres cruces (1) en raya, gano, valor 2. 
+                \item Tres círculos (0) en raya, pierdo, valor 0.
+                \item Tres cruces (1) en raya, gano, valor 2.
                 \item No hay huecos libres (-1) y ningún tres en raya, empate, valor 1.
             \end{itemize}
     \end{enumerate}
@@ -143,7 +151,7 @@
     \frametitle{Algoritmo Minimax}
     \begin{enumerate}[<+->]
         \item Por turnos, voy calculando todos los movimientos posibles.
-        \item Por cada partida finalizada, calculo su valor. 
+        \item Por cada partida finalizada, calculo su valor.
         \item Tras generar todas las partidas posibles, propago los valores:
         \begin{enumerate}
             \item Si muevo yo, escojo el movimiento más favorable para mí (\emph{max}).
@@ -152,15 +160,149 @@
     \end{enumerate}
 \end{frame}
 
-\begin{frame}[c]
+\begin{frame}[t]
     \frametitle{Algoritmo Minimax}
+    \only<1|handout:0>{
+        \rput[lt](0,0.5){
+            \includegraphics[width=.9\linewidth]{images/minimax/minimax00.eps}
+        }
+    }
+    \only<2|handout:0>{
+        \rput[lt](0,0.5){
+            \includegraphics[width=.9\linewidth]{images/minimax/minimax01.eps}
+        }
+    }
+    \only<3|handout:0>{
+        \rput[lt](0,0.5){
+            \includegraphics[width=.9\linewidth]{images/minimax/minimax02.eps}
+        }
+    }
+    \only<4|handout:0>{
+        \rput[lt](0,0.5){
+            \includegraphics[width=.9\linewidth]{images/minimax/minimax03.eps}
+        }
+    }
+    \only<5|handout:0>{
+        \rput[lt](0,0.5){
+            \includegraphics[width=.9\linewidth]{images/minimax/minimax04.eps}
+        }
+    }
+    \only<6|handout:0>{
+        \rput[lt](0,0.5){
+            \includegraphics[width=.9\linewidth]{images/minimax/minimax05.eps}
+        }
+    }
+    \only<7|handout:0>{
+        \rput[lt](0,0.5){
+            \includegraphics[width=.9\linewidth]{images/minimax/minimax06.eps}
+        }
+    }
+    \only<8|handout:0>{
+        \rput[lt](0,0.5){
+            \includegraphics[width=.9\linewidth]{images/minimax/minimax07.eps}
+        }
+    }
+    \only<9|handout:0>{
+        \rput[lt](0,0.5){
+            \includegraphics[width=.9\linewidth]{images/minimax/minimax08.eps}
+        }
+    }
+\end{frame}
+
+\begin{frame}[c]
+    \frametitle{Problema Algoritmo Minimax}
     \begin{center}
-        \includegraphics[width=0.90\linewidth]{images/minimax/minimax.eps}
+        \includegraphics[width=0.50\linewidth]{images/minimax/exponential.eps}
     \end{center}
 \end{frame}
 
 \section{Backtracking y Ramificación y Poda}
 
+\subsection{Backtracking}
+
+\begin{frame}[c]
+    \frametitle{Algoritmo \emph{Backtracking}}
+    \begin{block}{Algoritmo \emph{Backtracking} (Vuelta atrás)}
+        Algoritmo para resolver problemas de optimización que deben satisfacer ciertas restricciones.
+    \end{block}
+\end{frame}
+
+\begin{frame}[c]
+    \frametitle{Algoritmo \emph{Backtracking}}
+    \begin{center}
+        \includegraphics[width=0.5\linewidth]{images/backtracking/laberinto.eps}
+    \end{center}
+\end{frame}
+
+\begin{frame}[c]
+    \frametitle{Algoritmo \emph{Backtracking}}
+    \begin{enumerate}[<+->]
+        \item Represento el problema como un conjunto de números.
+        \item Especifico cómo realizar pasos válidos hacia la solución.
+        \item Especifico cómo decidir si he encontrado una solución.
+        \item Especifico cómo decidir cuán buena es la victoria (si hay diferencias).
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}[c]
+    \frametitle{Algoritmo \emph{Backtracking}}
+    \begin{enumerate}[<+->]
+        \item Problema: El laberinto es una tabla de números. 
+            \begin{itemize}
+                \item -1 significa obstáculo.
+                \item Un valor positivo representa el coste de atravesar la casilla.
+                \item 0 indica que ya he pasado.
+            \end{itemize}
+        \item Pasos válidos: Moverse derecha, arriba, izquierda y abajo, siempre que: 
+            \begin{itemize}
+                \item Siga dentro del laberinto.
+                \item No me mueva a un obstáculo.
+            \end{itemize}
+        \item Solución: Estoy en la casilla de salida.
+        \item Coste: Suma de las casillas por las que he pasado.
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}[c]
+    \frametitle{Algoritmo \emph{Backtracking}}
+    \begin{enumerate}[<+->]
+        \item Problema: El laberinto es una tabla de números.
+            \begin{itemize}
+                \item -1 significa obstáculo.
+                \item Un valor positivo representa el coste de atravesar la casilla.
+                \item 0 indica que ya he pasado.
+            \end{itemize}
+        \item Pasos válidos: Moverse derecha, arriba, izquierda y abajo, siempre que:
+            \begin{itemize}
+                \item Siga dentro del laberinto.
+                \item No me mueva a un obstáculo.
+            \end{itemize}
+        \item Solución: Estoy en la casilla de salida.
+        \item Coste: Suma de las casillas por las que he pasado.
+    \end{enumerate}
+\end{frame}
+
+\subsection{Ramificación y Poda}
+
+\begin{frame}[c]
+    \frametitle{Algoritmo Ramificación y Poda}
+    \begin{block}{Algoritmo Ramificación y Poda}
+        \begin{enumerate}[<+->]
+            \item Versión de \emph{backtracking} donde evalúo lo prometedor de cada nodo, y borro las ramas que no pueden alcanzar una solución óptima. 
+            \item Para evaluar lo prometedor, utilizo heurísticas.
+        \end{enumerate}
+    \end{block}
+\end{frame}
+
+
 \section{Redes Neuronales: Jugando Parchís}
+
+%% Lista de Conceptos
+
+%% - Algoritmo
+%% - Función
+%% - Exponencial
+%% - 
+
 
 \end{document} 

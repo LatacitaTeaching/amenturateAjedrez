@@ -329,11 +329,37 @@
     \frametitle{Algoritmo Ramificación y Poda}
     \begin{block}{Algoritmo Ramificación y Poda}
         \begin{enumerate}[<+->]
-            \item Versión de \emph{backtracking} donde evalúo lo prometedor de cada nodo, y borro las ramas que no pueden alcanzar una solución óptima.
+            \item Versión de \emph{backtracking} donde:
+            \begin{itemize}    
+                \item Expando todos los movimientos válidos de un nodo.
+                \item Evalúo lo prometedor de cada nodo. 
+                \item Exploro el nodo más prometedor.
+                \item No exploro los movimientos que no pueden alcanzar una solución óptima.
+            \end{itemize}
             \item Para evaluar lo prometedor, utilizo \emph{heurísticas}.
         \end{enumerate}
     \end{block}
 \end{frame}
+
+\begin{frame}[c]
+    \frametitle{Heurísticas}
+    \begin{block}{Heurística Ramificación y Poda}
+        Función que devuelve una cota inferior y optimista del coste que me queda para alcanzar la solución.
+    \end{block}
+\end{frame}
+
+\begin{frame}[c]
+    \frametitle{Ejemplo de Heurística}
+    \begin{center}
+        \includegraphics[width=0.25\linewidth]{images/backtracking/laberinto.eps}
+    \end{center}
+    \begin{enumerate}[<+->]
+        \item Me puedo mover hasta la salida en movimientos descendentes y laterales sin obstáculos.
+        \item Todas las casillas por las que paso tienen valor 1.
+    \end{enumerate}
+\end{frame}
+
+
 
 %% Poner ejemplo.
 

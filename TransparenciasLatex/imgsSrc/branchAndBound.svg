@@ -129,11 +129,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.4757999"
-     inkscape:cx="240.35532"
-     inkscape:cy="71.245738"
+     inkscape:zoom="4.5082224"
+     inkscape:cx="103.74113"
+     inkscape:cy="119.01272"
      inkscape:document-units="px"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="layer7"
      showgrid="true"
      inkscape:snap-grids="false"
      inkscape:snap-to-guides="false"
@@ -160,7 +160,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -391,8 +391,8 @@
      inkscape:groupmode="layer"
      id="layer3"
      inkscape:label="Nodo01"
-     sodipodi:insensitive="true"
-     style="display:inline">
+     style="display:inline"
+     sodipodi:insensitive="true">
     <text
        transform="translate(-234.375,-302.36221)"
        xml:space="preserve"
@@ -448,34 +448,29 @@
        height="32.8125"
        x="82.930527"
        y="17.335285" />
-    <g
-       style="display:inline;enable-background:new"
-       id="g6963-2"
-       transform="translate(-219.09215,-135.58636)">
-      <text
-         id="text5946-3"
-         y="221.65211"
-         x="243.4326"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.9375;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         xml:space="preserve"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;stroke:none;stroke-width:0.9375;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           y="221.65211"
-           x="243.4326"
-           id="tspan5944-4"
-           sodipodi:role="line">C=1</tspan><tspan
-           id="tspan5948-3"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;stroke:none;stroke-width:0.9375;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           y="240.40211"
-           x="243.4326"
-           sodipodi:role="line">H=4</tspan></text>
-      <rect
-         y="209.17165"
-         x="241.08519"
-         height="32.8125"
-         width="37.5"
-         id="rect6957-9"
-         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.0629921;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
-    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.9375;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="24.340452"
+       y="86.065758"
+       id="text5946-3"><tspan
+         sodipodi:role="line"
+         id="tspan5944-4"
+         x="24.340452"
+         y="86.065758"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;stroke:none;stroke-width:0.9375;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">C=1</tspan><tspan
+         sodipodi:role="line"
+         x="24.340452"
+         y="104.81576"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;stroke:none;stroke-width:0.9375;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="tspan5948-3">H=4</tspan></text>
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.0629921;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect6957-9"
+       width="37.5"
+       height="32.8125"
+       x="21.99304"
+       y="73.585289" />
   </g>
   <g
      inkscape:groupmode="layer"

@@ -361,50 +361,94 @@
 \end{frame}
 
 \begin{frame}[t]
-    \frametitle{Algoritmo \emph{Backtracking}}
+    \frametitle{Algoritmo Ramificación y Poda}
     \only<1|handout:0>{
-        \rput[lt](0,0){
-            \includegraphics[width=0.8\linewidth]{images/branchAndBound/branchAndBound00.eps}
+        \rput[lt](1.5,0){
+            \includegraphics[width=0.7\linewidth]{images/branchAndBound/branchAndBound00.eps}
         }
     }
     \only<2|handout:0>{
-        \rput[lt](0,0){
-            \includegraphics[width=0.8\linewidth]{images/branchAndBound/branchAndBound01.eps}
+        \rput[lt](1.5,0){
+            \includegraphics[width=0.7\linewidth]{images/branchAndBound/branchAndBound01.eps}
         }
     }
     \only<3|handout:0>{
-        \rput[lt](0,0){
-            \includegraphics[width=0.8\linewidth]{images/branchAndBound/branchAndBound02.eps}
+        \rput[lt](1.5,0){
+            \includegraphics[width=0.7\linewidth]{images/branchAndBound/branchAndBound02.eps}
         }
     }
     \only<4|handout:0>{
-        \rput[lt](0,0){
-            \includegraphics[width=0.8\linewidth]{images/branchAndBound/branchAndBound03.eps}
+        \rput[lt](1.5,0){
+            \includegraphics[width=0.7\linewidth]{images/branchAndBound/branchAndBound03.eps}
         }
     }
     \only<5|handout:0>{
-        \rput[lt](0,0){
-            \includegraphics[width=0.8\linewidth]{images/branchAndBound/branchAndBound04.eps}
+        \rput[lt](1.5,0){
+            \includegraphics[width=0.7\linewidth]{images/branchAndBound/branchAndBound04.eps}
         }
     }
     \only<6|handout:0>{
-        \rput[lt](0,0){
-            \includegraphics[width=0.8\linewidth]{images/branchAndBound/branchAndBound05.eps}
+        \rput[lt](1.5,0){
+            \includegraphics[width=0.7\linewidth]{images/branchAndBound/branchAndBound05.eps}
         }
     }
     \only<7|handout:0>{
-        \rput[lt](0,0){
-            \includegraphics[width=0.8\linewidth]{images/branchAndBound/branchAndBound06.eps}
+        \rput[lt](1.5,0){
+            \includegraphics[width=0.7\linewidth]{images/branchAndBound/branchAndBound06.eps}
         }
     }
     \only<8|handout:1>{
-        \rput[lt](0,0){
-            \includegraphics[width=0.8\linewidth]{images/branchAndBound/branchAndBound07.eps}
+        \rput[lt](1.5,0){
+            \includegraphics[width=0.7\linewidth]{images/branchAndBound/branchAndBound07.eps}
+        }
+    }
+    \only<9|handout:1>{
+        \rput[lt](1.5,0){
+            \includegraphics[width=0.7\linewidth]{images/branchAndBound/branchAndBound08.eps}
+        }
+    }
+    \only<10|handout:1>{
+        \rput[lt](1.5,0){
+            \includegraphics[width=0.7\linewidth]{images/branchAndBound/branchAndBound09.eps}
         }
     }
 \end{frame}
 
-\section{Redes Neuronales: Jugando Parchís}
+\section{Ajedrez por Computador}
+
+\begin{frame}[c]
+    \frametitle{Algoritmos para Jugar al Ajedrez}
+    \begin{enumerate}[<+->]
+        \item Árbol de partidas de ajedrez tiene tamaño inabordable (actualmente). 
+        \item Se acotan los niveles de profundidad y tiempo de exploración.
+        \item Se aplican heurísticas y se poda con cautela.
+        \item Se generan 6 niveles o más de profundidad.
+        \item Procesan entre 10.000-100.000 jugadas por segundo.
+        \item Usan \emph{endgame tablebases} y \emph{opening books}. 
+        \item Software libre de ajedrez, como \href{https://stockfishchess.org/}{Stockfish}, es capaz de batir a campeones mundiales.
+        %% \item Los programas modernos tienen funcionalidades para limitar su potencia y hacer el juego divertido.
+        %% Stockfish gana a campeones mundiales.
+        %% Los programas de ajedrez tienen modos para bajar el nivel y para cometer errores al azar.
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}[c]
+    \frametitle{Historia de los Algoritmos para Jugar al Ajedrez}
+    \begin{enumerate}[<+->]
+        \item 1957: Se inventa la \emph{poda alfa-beta}.
+        \item 1976: Un computador gana su primer torneo.
+        \item 1989: \emph{DeepThought} gana al gran maestro \emph{Ben Larsen}.
+        \item 1996: \emph{DeepBlue} gana una partida a \emph{Garry Kasparov}.
+        \item 1997: \emph{DeepBlue} derrota a \emph{Garry Kasparov}, 3.5 a 2.5.
+        \item 1998: \emph{Rebel 10} derrota a \emph{Viswanathan Anand}, 5 a 3.
+        \item 2002: \emph{Vladimir Kramnik vs Deep Fritz}: tácticas anticomputador.
+        \item 2006: \emph{Vladimir Kramnik vs Deep Fritz}: \emph{the science is done}.
+        \item 2009: Un teléfono móvil gana un torneo de sexta categoría.
+        \item 2017: \emph{AlphaZero} derrota a \emph{Stockfish}.
+    \end{enumerate}
+\end{frame}
+
+\section{Parchís por Computador: Redes Neuronales}
 
 %% Lista de Conceptos
 

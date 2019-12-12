@@ -445,6 +445,8 @@
 
 \section{Parchís por Computador: Redes Neuronales}
 
+\subsection{Aplicando minimax al parchís}
+
 \begin{frame}[c]
     \frametitle{Parchís con Minimax}
     \begin{enumerate}[<+->]
@@ -457,16 +459,60 @@
             \item Barrera que nunca se abre.
         \end{itemize}
         \item El jugador contrario no escoge movimiento libremente, depende del dado.
+        \item Tres objetivos: avanzar, no ser comido y comer.
     \end{enumerate}
 \end{frame}
 
+\begin{frame}[c]
+    \frametitle{Jugadas Curiosas I}
+    %% Concepto de Saldo
+\end{frame}
 
-%% Lista de Conceptos
+\begin{frame}[c]
+    \frametitle{Jugadas Curiosas II}
+    %% No entrar
+\end{frame}
 
-%% - Algoritmo
-%% - Función
-%% - Exponencial
-%% -
+\begin{frame}[c]
+    \frametitle{Jugadas Curiosas III}
+    %% Dejarse comer
+\end{frame}
 
+\begin{frame}[c]
+    \frametitle{Jugadas Curiosas IV}
+    %% Retirada de Agumol
+\end{frame}
+
+\subsection{Redes Neuronales}
+
+\begin{frame}[c]
+    \frametitle{Concepto de Red Neuronal}
+    \begin{center}
+        \includegraphics[width=0.85\linewidth]{images/neural/neuralNetwork.eps}
+    \end{center}
+\end{frame}
+
+\begin{frame}[c]
+    \frametitle{Concepto de Red Neuronal}
+    \begin{enumerate}[<+->]
+        \item Dado una serie de estímulos de entradas (posiciones fichas), produce un valor de salida (ficha a mover).
+        \item La salida puede ser correcta o incorrecta. 
+        \item Si es incorrecta, la red es capaz de modificar el valor de sus conexiones para que la próxima vez sea correcta (aprende).
+        \item Tras un largo entrenamiento, la red ha acumulado experiencia y tiene una muy alta fiabilidad.
+    \end{enumerate}
+\end{frame}
+
+\section{Conclusiones}
+
+\begin{frame}[c]
+    \frametitle{Conclusiones}
+    \begin{enumerate}[<+->]
+        \item Un computador calcula muchísimo más rápido que un humano.
+        \item Un humano no puede ganarle a un computador en actividades basadas en cálculos, como el ajedrez.
+        \item ¿Realmente piensa un computador y es inteligente?
+        \item Se puede decir que un computador es inteligente cuando realiza una tarea que al realizarla un humano diríamos que es inteligente.
+        \item Los humanos tenemos una mayor eficiencia energética.
+    \end{enumerate}
+\end{frame}
 
 \end{document} 

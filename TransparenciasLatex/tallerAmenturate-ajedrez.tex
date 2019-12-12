@@ -44,14 +44,9 @@
             \includegraphics[width=\linewidth]{images/intro/dragon01.eps}
         }
     }
-    \only<3|handout:0>{
+    \only<3|handout:1>{
         \rput[lt](0,-1){
             \includegraphics[width=\linewidth]{images/intro/dragon02.eps}
-        }
-    }
-    \only<4|handout:0>{
-        \rput[lt](0,-1){
-            \includegraphics[width=\linewidth]{images/intro/dragon03.eps}
         }
     }
 \end{frame}
@@ -419,12 +414,12 @@
 \begin{frame}[c]
     \frametitle{Algoritmos para Jugar al Ajedrez}
     \begin{enumerate}[<+->]
-        \item Árbol de partidas de ajedrez tiene tamaño inabordable (actualmente). 
+        \item Árbol de partidas de ajedrez tiene tamaño inabordable (actualmente).
         \item Se acotan los niveles de profundidad y tiempo de exploración.
         \item Se aplican heurísticas y se poda con cautela.
         \item Se generan 6 niveles o más de profundidad.
         \item Procesan entre 10.000-100.000 jugadas por segundo.
-        \item Usan \emph{endgame tablebases} y \emph{opening books}. 
+        \item Usan \emph{endgame tablebases} y \emph{opening books}.
         \item Software libre de ajedrez, como \href{https://stockfishchess.org/}{Stockfish}, es capaz de batir a campeones mundiales.
         %% \item Los programas modernos tienen funcionalidades para limitar su potencia y hacer el juego divertido.
         %% Stockfish gana a campeones mundiales.
@@ -449,6 +444,22 @@
 \end{frame}
 
 \section{Parchís por Computador: Redes Neuronales}
+
+\begin{frame}[c]
+    \frametitle{Parchís con Minimax}
+    \begin{enumerate}[<+->]
+        \item Árbol de profundidad infinita:
+        \begin{itemize}
+            \item Nadie sale nunca. 
+            \item Nadie entra nunca.
+            \item Salgo, avanzo un poco, tres seis y vuelta a casa.
+            \item Nos comemos mutuamente de manera indefinida.
+            \item Barrera que nunca se abre.
+        \end{itemize}
+        \item El jugador contrario no escoge movimiento libremente, depende del dado.
+    \end{enumerate}
+\end{frame}
+
 
 %% Lista de Conceptos
 

@@ -126,7 +126,7 @@
         \includegraphics[width=0.15\linewidth]{images/minimax/tresEnRaya.eps}
     \end{center}
     \begin{enumerate}[<+->]
-        \item El tablero es una tabla de números -1/libre, 0/círculo, 1/cruz (yo).
+        \item El tablero es una tabla de números: -1/libre, 0/círculo, 1/cruz (pc).
         \item Movimientos válidos: si hay hueco (-1), pongo la ficha que toque.
         \item Final de la partida:
             \begin{itemize}
@@ -242,7 +242,7 @@
 \begin{frame}[c]
     \frametitle{Algoritmo \emph{Backtracking}}
     \begin{center}
-        \includegraphics[width=0.25\linewidth]{images/backtracking/laberinto.eps}
+        \includegraphics[width=0.20\linewidth]{images/backtracking/laberinto.eps}
     \end{center}
     \begin{enumerate}[<+->]
         \item Problema: El laberinto es una tabla de números.
@@ -255,6 +255,7 @@
             \begin{itemize}
                 \item Sigo dentro del laberinto.
                 \item No me muevo a un obstáculo.
+                \item No es una posición explorada.
             \end{itemize}
         \item Solución: Estoy en la casilla de salida.
         \item Coste: Suma de las casillas por las que he pasado.
@@ -265,7 +266,7 @@
     \frametitle{Algoritmo \emph{Backtracking}}
     \begin{enumerate}[<+->]
         \item Si soy solución, calculo el coste y lo propago.
-        \item Si hay algún movimiento libre, lo genero y lo exploro.
+        \item Si no, si hay algún movimiento libre, lo genero y lo exploro.
         \begin{itemize}
             \item Si el movimiento lleva a una solución y no había solución, anoto el movimiento como solución.
             \item Si el movimiento lleva a una solución, había solución y la mejora, anoto el movimiento como solución.
@@ -452,7 +453,7 @@
     \begin{enumerate}[<+->]
         \item Árbol de profundidad infinita:
         \begin{itemize}
-            \item Nadie sale nunca. 
+            \item Nadie sale nunca.
             \item Nadie entra nunca.
             \item Salgo, avanzo un poco, tres seis y vuelta a casa.
             \item Nos comemos mutuamente de manera indefinida.
@@ -464,23 +465,71 @@
 \end{frame}
 
 \begin{frame}[c]
-    \frametitle{Jugadas Curiosas I}
-    %% Concepto de Saldo
+    \frametitle{Jugadas Curiosas I: Ahorro de Saldo}
+    \begin{center}
+        \includegraphics[width=0.5\linewidth]{images/neural/saldo.eps}
+    \end{center}
 \end{frame}
 
 \begin{frame}[c]
-    \frametitle{Jugadas Curiosas II}
-    %% No entrar
+    \frametitle{Jugadas Curiosas II: Evitar Ficha Única}
+    \begin{center}
+        \includegraphics[width=0.5\linewidth]{images/neural/ultimaSuelta.eps}
+    \end{center}
 \end{frame}
 
 \begin{frame}[c]
-    \frametitle{Jugadas Curiosas III}
-    %% Dejarse comer
+    \frametitle{Jugadas Curiosas III: Bien Común}
+    \begin{center}
+        \includegraphics[width=0.5\linewidth]{images/neural/bienComun.eps}
+    \end{center}
 \end{frame}
 
 \begin{frame}[c]
-    \frametitle{Jugadas Curiosas IV}
-    %% Retirada de Agumol
+    \frametitle{Jugadas Curiosas IV: Cantos de Sirenas}
+    \begin{center}
+        \includegraphics[width=0.5\linewidth]{images/neural/cantoSirenas.eps}
+    \end{center}
+\end{frame}
+
+
+\begin{frame}[t]
+    \frametitle{Jugadas Curiosas V: Retirada de Augusto}
+    \only<1|handout:0>{
+        \rput[lt](3,0){
+            \includegraphics[width=0.5\linewidth]{images/neural/agumol00.eps}
+        }
+    }
+    \only<2|handout:0>{
+        \rput[lt](3,0){
+            \includegraphics[width=0.5\linewidth]{images/neural/agumol01.eps}
+        }
+    }
+    \only<3|handout:0>{
+        \rput[lt](3,0){
+            \includegraphics[width=0.5\linewidth]{images/neural/agumol02.eps}
+        }
+    }
+    \only<4|handout:0>{
+        \rput[lt](3,0){
+            \includegraphics[width=0.5\linewidth]{images/neural/agumol03.eps}
+        }
+    }
+    \only<5|handout:0>{
+        \rput[lt](3,0){
+            \includegraphics[width=0.5\linewidth]{images/neural/agumol04.eps}
+        }
+    }
+    \only<6|handout:0>{
+        \rput[lt](3,0){
+            \includegraphics[width=0.5\linewidth]{images/neural/agumol05.eps}
+        }
+    }
+    \only<7|handout:0>{
+        \rput[lt](3,0){
+            \includegraphics[width=0.5\linewidth]{images/neural/agumol06.eps}
+        }
+    }
 \end{frame}
 
 \subsection{Redes Neuronales}
@@ -496,8 +545,8 @@
     \frametitle{Concepto de Red Neuronal}
     \begin{enumerate}[<+->]
         \item Dado una serie de estímulos de entradas (posiciones fichas), produce un valor de salida (ficha a mover).
-        \item La salida puede ser correcta o incorrecta. 
-        \item Si es incorrecta, la red es capaz de modificar el valor de sus conexiones para que la próxima vez sea correcta (aprende).
+        \item La decisión puede ser acertada o desacertada.
+        \item Si es desacertada, la red es capaz de modificar el valor de sus conexiones para que la próxima vez sea más acertada (aprende).
         \item Tras un largo entrenamiento, la red ha acumulado experiencia y tiene una muy alta fiabilidad.
     \end{enumerate}
 \end{frame}
@@ -509,10 +558,18 @@
     \begin{enumerate}[<+->]
         \item Un computador calcula muchísimo más rápido que un humano.
         \item Un humano no puede ganarle a un computador en actividades basadas en cálculos, como el ajedrez.
+        \item Ante un reto de vida o muerte, entre ajedrez y parchís contra un computador, elige parchís.
         \item ¿Realmente piensa un computador y es inteligente?
         \item Se puede decir que un computador es inteligente cuando realiza una tarea que al realizarla un humano diríamos que es inteligente.
         \item Los humanos tenemos una mayor eficiencia energética.
     \end{enumerate}
+\end{frame}
+
+\begin{frame}[c]
+    \begin{center}
+        \Huge{Gracias por vuestra atención.} \\ \ \\
+        \includegraphics[width=0.20\linewidth]{images/tioDelCadiz.eps}
+    \end{center}
 \end{frame}
 
 \end{document} 

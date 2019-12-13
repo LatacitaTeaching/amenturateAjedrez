@@ -47,4 +47,4 @@
 
 * John Von Neummann. [Zur Theorie der Gesellschaftsspiele](https://doi.org/10.1007/BF01448847). Mathematische Annalen 100(1):295-320, Diciembre 1928.
 * Claude E. Shannon. [Programming a Computer for Playing Chess](https://vision.unipv.it/IA1/aa2009-2010/ProgrammingaComputerforPlayingChess.pdf) 7-41(314), Philosophical Magazine, Marzo 1950.
-* David Silver, Thomas Hubert, Julian Schrittwieser, Ioannis Antonoglou, Matthew Lai, Arthur Guez, Marc Lanctot, Laurent Sifre, Dharshan Kumaran, Thore Graepel, Timothy Lillicrap, Karen Simonyan y Demis Hassabis, [A general reinforcement learning algorithm that masters chess, shogi, and Go through self-play]. Science 362(6419): 1140-1144, Diciembre 2018.
+* David Silver, Thomas Hubert, Julian Schrittwieser, Ioannis Antonoglou, Matthew Lai, Arthur Guez, Marc Lanctot, Laurent Sifre, Dharshan Kumaran, Thore Graepel, Timothy Lillicrap, Karen Simonyan y Demis Hassabis, [A general reinforcement learning algorithm that masters chess, shogi, and Go through self-play](https://doi.org/10.1126/science.aar6404). Science 362(6419): 1140-1144, Diciembre 2018.

@@ -31,8 +31,8 @@
 # Noticias de Periódicos.
 
 * [¿Sabías que podría haber una relación entre Blancanieves, Turing y Apple?](https://elpais.com/sociedad/2013/11/13/actualidad/1384332286_406469.html). Manuel Lozano Leyva, El País, 13 de Noviembre de 2013.
-* [Reino Unido indultará a 65.000 condenados por ser homosexuales](https://elpais.com/internacional/2016/10/20/actualidad/1476957104_546340.html), María Contreras, El País, 20 de Octubre de 2016.
 * [Alan Turing recibe el indulto póstumo](https://www.eldiario.es/turing/Alan-Turing-indulto-homosexualidad_0_210678993.html), Mónica Zas Marcos, eldiario.es, 24 de Diciembre del 2013.
+* [Reino Unido indultará a 65.000 condenados por ser homosexuales](https://elpais.com/internacional/2016/10/20/actualidad/1476957104_546340.html), María Contreras, El País, 20 de Octubre de 2016.
 * [Los trucos de IBM contra Kaspárov](https://elpais.com/deportes/2017/06/08/la_bitacora_de_leontxo/1496908568_067804.html), Leontxo García, El País, 8 de Junio de 2017.
 * [Ae4 Ta2. El ogro de silicio](https://www.jotdown.es/2013/08/ae4-ta2-el-ogro-de-silicio/), Fermín de la Calle, JotDown.
 * [Once Again, Machine Beats Human Champion at Chess](https://www.nytimes.com/2006/12/05/crosswords/chess/05cnd-chess.html), Dylan Loeb McClain, New York Times, 5 de Diciembre de 2006.

@@ -30,7 +30,7 @@
 
 # Noticias de Periódicos.
 
-* [¿Sabías que podría haber una relación entre Blancanieves, Turing y Apple?](¿Sabías que podría haber una relación entre Blancanieves, Turing y Apple?). Manuel Lozano Leyva, El País, 13 de Noviembre de 2013.
+* [¿Sabías que podría haber una relación entre Blancanieves, Turing y Apple?](https://elpais.com/sociedad/2013/11/13/actualidad/1384332286_406469.html). Manuel Lozano Leyva, El País, 13 de Noviembre de 2013.
 * [Los trucos de IBM contra Kaspárov](https://elpais.com/deportes/2017/06/08/la_bitacora_de_leontxo/1496908568_067804.html), Leontxo García, El País, 8 de Junio de 2017.
 * [Ae4 Ta2. El ogro de silicio](https://www.jotdown.es/2013/08/ae4-ta2-el-ogro-de-silicio/), Fermín de la Calle, JotDown.
 * [Once Again, Machine Beats Human Champion at Chess](https://www.nytimes.com/2006/12/05/crosswords/chess/05cnd-chess.html), Dylan Loeb McClain, New York Times, 5 de Diciembre de 2006.
@@ -42,3 +42,9 @@
 
 * [Doodle de Google por el 100 Aniversario del Nacimiento de Alan Turing](https://www.google.com/doodles/alan-turings-100th-birthday).
 * [Mercosur Cup 2009](https://www.hiarcs.com/Games/Mercosur2009/mercosur09.htm) (Torneo de Ajedrez ganado por un teléfono móvil).
+
+# Artículos Científicos
+
+* John Von Neummann. [Zur Theorie der Gesellschaftsspiele](https://doi.org/10.1007/BF01448847). Mathematische Annalen 100(1):295-320, Diciembre 1928.
+* Claude E. Shannon. [Programming a Computer for Playing Chess](https://vision.unipv.it/IA1/aa2009-2010/ProgrammingaComputerforPlayingChess.pdf) 7-41(314), Philosophical Magazine, Marzo 1950.
+* David Silver, Thomas Hubert, Julian Schrittwieser, Ioannis Antonoglou, Matthew Lai, Arthur Guez, Marc Lanctot, Laurent Sifre, Dharshan Kumaran, Thore Graepel, Timothy Lillicrap, Karen Simonyan y Demis Hassabis, [A general reinforcement learning algorithm that masters chess, shogi, and Go through self-play]. Science 362(6419): 1140-1144, Diciembre 2018.
